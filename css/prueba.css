@@ -1,0 +1,128 @@
+:root{
+    --main--color:#e02f6b;
+    --blue:#0000ff;
+    --blue-dark:#18293c;
+    --gren-yellow:#cddc39;
+    --pink-ligth:#efa2b4;
+    --cyan-ligth:#aef1ee;
+    --white:#ffffff;
+    --white-alpha-40:rgba(255,255,255,0.40);
+    --white-alpha-25:rgba(255,255,255,0.25);
+    --backdrop-filter-blur:blur(0.3rem)
+}
+.main{
+    max-width:75rem ;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+
+.grid-row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+img{
+    max-width:62rem ;
+    vertical-align: middle;
+}
+.portfolio-section{
+    padding-bottom: 3.125rem;
+}
+.portfolio-item{
+    
+    margin: 0 0.9375rem 1.875rem;
+}
+.portfolio-item-thumbnail{
+    padding:0.625rem ;
+    background-color: var(--white-alpha-25);
+    background-color: var(--white-alpha-40);
+    border-radius: 0.625rem;
+}
+.portfolio-item-thumbnail img{
+    width: 100%;
+    border-radius: 0.625rem;
+}
+.portfolio-item h3{
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin: 1.25rem 0;
+}
+.portfolio-item-details{
+    display: none;
+}
+/*portfolio poup**/
+.portfolio-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    visibility: hidden;
+    
+}
+.portfolio-popup.open{
+    visibility: visible;
+    overflow-y: auto;
+}
+.pp-inner{
+    min-height: 100vh;
+    padding:2.5rem 0.9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pp-content{
+    background-color: var(--white-alpha-25);
+    padding:1.875rem;
+    border-radius:1.875rem;
+    max-width:66.25rem;
+    width: 100%;
+    border: 1px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter-blur);
+    opacity: 0;
+    transform:scale(0.9) ;
+}
+.portfolio-popup.open .pp-content{
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+.pp-header{
+    position: relative;
+}
+.pp-header .btn{
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right:  -2.5rem;
+    top: -2.5rem;
+}
+.pp-thumbnail img{
+    border-radius: 0.625rem;
+}
+.pp-header h3{
+    font-size:1.5625rem;
+    text-transform: capitalize;
+    margin: 1.25rem 0 0.9375rem ;
+}
+.pp-body .description{
+    margin-bottom:1.25rem ;
+}
+.pp-body .general-info li{
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.pp-body .general-info li span{
+    font-family: 300;
+}
+.pp-body .general-info li a{
+    text-transform: lowercase;
+    color: var(--main--color);
+}
