@@ -34,17 +34,5 @@ function validar(e) {
       title: "Oops...",
       text: "Debes de llenar el campo mensaje",
     });
-  } else if (
-    (nombre == nombre) &
-    (email == email) &
-    (subject == subject) &
-    (message == message)
-  ) {
-    swal.fire({
-      icon: "success",
-      title: "El correo fue enviado de manera exitosa",
-      showConfirmButton: false,
-      timer: 1600,
-    });
-  }
+  } 
 }
