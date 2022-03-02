@@ -34,5 +34,5 @@ function validar(e) {
       title: "Oops...",
       text: "Debes de llenar el campo mensaje",
     });
-  } 
+  }
 }
