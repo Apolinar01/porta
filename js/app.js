@@ -65,5 +65,3 @@ navToggler.addEventListener("click", () => {
     e.target.classList.contains("pp-inner") && togglePortfolioPopup();
   })
 ;
-
-
